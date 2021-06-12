@@ -36,8 +36,5 @@ These rules, which compare the behavior of the automaton to real life, can be co
 
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed, live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
 
-Some information about the code:
-The board has 24 columns and 79 rows. I have divided it based on the number of columns. I have created 24 threads, each of which performs the working on one column. The phase 1 of the barrier is called to ensure that the board is modified if and only if all the threads have finished their working. After modifying the board(i.e the next generation) the phase 2 of the barrier is called before the thread ends to ensure that all the threads finish together, and the entire board is modified before printing.
-
 
 
