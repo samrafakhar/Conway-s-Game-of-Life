@@ -4,6 +4,16 @@ The game of life implemented in C
 
 It doesnt take any arguments. Using rand() it initiates board. the code for barrier is taken from the litle book of semaphores (reusable barrier). the board is allocated on heap so it becomes easier to use it whil e making threads and type casting.
 
+![screenshot](https://user-images.githubusercontent.com/68819501/121777565-40fbf680-cbac-11eb-923d-7f57e0e50adc.PNG)
+
+## How to run 
+
+To compile the code, use the following command in your ubuntu terminal:
+                gcc gameoflife.c -pthread
+
+To execute it, enter the following command
+                ./a.out input.txt
+
 ## Game of Life
 Description of the Game of Life taken from Wikipedia: \
 The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
@@ -27,18 +37,5 @@ The initial pattern constitutes the seed of the system. The first generation is 
 Some information about the code:
 The board has 24 columns and 79 rows. I have divided it based on the number of columns. I have created 24 threads, each of which performs the working on one column. The phase 1 of the barrier is called to ensure that the board is modified if and only if all the threads have finished their working. After modifying the board(i.e the next generation) the phase 2 of the barrier is called before the thread ends to ensure that all the threads finish together, and the entire board is modified before printing.
 
-![screenshot](https://user-images.githubusercontent.com/68819501/121777565-40fbf680-cbac-11eb-923d-7f57e0e50adc.PNG)
-
-## How to run 
-
-To compile the code, use the following command in your ubuntu terminal:
-
-gcc gameoflife.c -pthread
-
-To execute it, enter the following command
-
-./a.out input.txt
-
-Make sure the input file is in the current working directory.
 
 
