@@ -9,9 +9,11 @@ It doesnt take any arguments. Using rand() it initiates board. the code for barr
 ## How to run 
 
 To compile the code, use the following command in your ubuntu terminal:
+
                 gcc gameoflife.c -pthread
 
 To execute it, enter the following command
+
                 ./a.out input.txt
 
 ## Game of Life
