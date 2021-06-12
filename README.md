@@ -2,6 +2,9 @@
 
 The game of life implemented in C 
 
+the code for barrier is taken from the litle book of semaphores (reusable barrier). the board is allocated on heap so it becomes easier to use it whil e making threads and type casting.
+
+## Game of Life
 Description of the Game of Life taken from Wikipedia: \
 The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
 
