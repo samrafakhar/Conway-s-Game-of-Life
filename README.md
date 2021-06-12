@@ -2,7 +2,7 @@
 
 The game of life implemented in C 
 
-the code for barrier is taken from the litle book of semaphores (reusable barrier). the board is allocated on heap so it becomes easier to use it whil e making threads and type casting.
+It doesnt take any arguments. Using rand() it initiates board. the code for barrier is taken from the litle book of semaphores (reusable barrier). the board is allocated on heap so it becomes easier to use it whil e making threads and type casting.
 
 ## Game of Life
 Description of the Game of Life taken from Wikipedia: \
